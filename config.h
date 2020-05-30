@@ -94,6 +94,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,                     spawn,           {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return,                spawn,           {.v = termcmd } },
 	{ MODKEY,                       XK_grave,                 togglescratch,   {.v = scratchpadcmd } },
+	{ MODKEY,                       XK_u,                     spawn,           {.v = browser } },
 	{ 0,                            XF86XK_AudioLowerVolume,  spawn,           {.v = downvol } },
 	{ 0,                            XF86XK_AudioMute,         spawn,           {.v = mutevol } },
 	{ 0,                            XF86XK_AudioRaiseVolume,  spawn,           {.v = upvol   } },

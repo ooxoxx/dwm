@@ -100,6 +100,7 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioRaiseVolume,  spawn,           {.v = upvol   } },
 	{ 0,                            XF86XK_Suspend,           spawn,           {.v = suspendcmd   } },
 	{ MODKEY,                       XK_b,                     spawn,           {.v = wpcmd } },
+	{ MODKEY,                       XK_F11,                   spawn,           {.v = togglebar } },
 	{ 0,                            XK_Print,                 spawn,           {.v = screenshotcmd } },
 	{ MODKEY,                       XK_j,                     focusstack,      {.i = +1 } },
 	{ MODKEY,                       XK_k,                     focusstack,      {.i = -1 } },

@@ -82,15 +82,15 @@ static const char *mutevol[] = { "/home/leo/scripts/vol-toggle.sh",  NULL };
 static const char *suspendcmd[]  = { "/home/leo/scripts/suspend.sh", NULL };
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
 static const char *wpcmd[]  = { "/home/leo/scripts/wp-change.sh", NULL };
-static const char *sktogglecmd[]  = { "/home/leo/scripts/sck-tog.sh", NULL };
+//static const char *sktogglecmd[]  = { "/home/leo/scripts/sck-tog.sh", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
-static const char *setcolemakcmd[]  = { "/home/leo/scripts/setxmodmap-colemak.sh", NULL };
-static const char *setqwertycmd[]  = { "/home/leo/scripts/setxmodmap-qwerty.sh", NULL };
+//static const char *setcolemakcmd[]  = { "/home/leo/scripts/setxmodmap-colemak.sh", NULL };
+//static const char *setqwertycmd[]  = { "/home/leo/scripts/setxmodmap-qwerty.sh", NULL };
 
 #include "X11/XF86keysym.h"
 static Key keys[] = {
-	/* modifier                     key        function        argument */
+	/* modifier                     key                       function         argument */
 	{ MODKEY,                       XK_p,                     spawn,           {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return,                spawn,           {.v = termcmd } },
 	{ MODKEY,                       XK_grave,                 togglescratch,   {.v = scratchpadcmd } },
@@ -98,6 +98,7 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioLowerVolume,  spawn,           {.v = downvol } },
 	{ 0,                            XF86XK_AudioMute,         spawn,           {.v = mutevol } },
 	{ 0,                            XF86XK_AudioRaiseVolume,  spawn,           {.v = upvol   } },
+	{ 0,                            XF86XK_Suspend,           spawn,           {.v = suspendcmd   } },
 	{ MODKEY,                       XK_b,                     spawn,           {.v = wpcmd } },
 	{ 0,                            XK_Print,                 spawn,           {.v = screenshotcmd } },
 	{ MODKEY,                       XK_j,                     focusstack,      {.i = +1 } },
